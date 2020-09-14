@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const axios = require('axios')
 const querystring = require('querystring')
-const cron = require('node-cron');
 const DBL = require('dblapi.js')
 const dbl = new DBL(process.env.DBL_TOKEN, client)
 
