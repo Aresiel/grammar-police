@@ -12,7 +12,7 @@ client.on('ready', () => {
 });
 
 setInterval(() => {
-	client.user.setActivity('you.', { type: 'WATCHING'})
+	client.user.setActivity('for g!feedback', { type: 'WATCHING'})
 },1200000)
 
 function DTT(message) {
