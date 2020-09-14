@@ -1,0 +1,18 @@
+{
+  "name": "grammar-zark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aresiel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dblapi.js": "^2.4.1",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "querystring": "^0.2.0"
+  }
+}
