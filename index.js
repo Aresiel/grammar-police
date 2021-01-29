@@ -38,7 +38,7 @@ function DTT(message) {
 
 client.on('message', message => {
 
-	if(message.content.startsWith("g!feedback")) return message.channel.send("<@"+ message.author.id +">, DM Aresiel#0666 with feedback.")
+	if(message.content.startsWith("g!feedback")) return message.channel.send("<@"+ message.author.id +">, DM Aresiel#0666 with feedback. Do mind that the bot uses LanguageTool for **all** of it's spellchecking, so there's little I can change in that regard.")
 
 	if (message.author.id == client.user.id) return;
 
@@ -62,7 +62,7 @@ client.on('message', message => {
 					
 					if (match.rule.id == "MORFOLOGIK_RULE_EN_US") {
 						if(match.replacements.length > 0) {
-							desc = `You wrote "${match.context.text.substr(match.context.offset,match.context.length)}", may you have meant "${match.replacements[0].value}"?`
+							desc = `You wrote "${match.context.text.substr(match.context.offset,match.context.length)}". Did you mean "${match.replacements[0].value}"?`
 						} else {
 							desc = `The word "${match.context.text.substr(match.context.offset,match.context.length)} is not spelled correctly."`
 						}
@@ -70,13 +70,13 @@ client.on('message', message => {
 					}
 					if(match.rule.id == "EN_CONTRACTION_SPELLING"){
 						if(match.replacements.length > 0) {
-							desc = `You wrote "${match.context.text.substr(match.context.offset,match.context.length)}", may you have meant "${match.replacements[0].value}"?`
+							desc = `You wrote "${match.context.text.substr(match.context.offset,match.context.length)}". Did you mean "${match.replacements[0].value}"?`
 						} else {
-							desc = `The contraction "${match.context.text.substr(match.context.offset,match.context.length)} is not spelled correctly."`
+							desc = `The contraction "${match.context.text.substr(match.context.offset,match.context.length)}" is not spelled correctly.`
 						}
 					}
 					if(match.rule.id == "UPPERCASE_SENTENCE_START") {
-						desc = "In English sentences must start with a capital letter."
+						desc = "In English, sentences must start with a capital letter."
 					}
 					if(match.rule.id == "DOUBLE_PUNCTUATION") {
 						desc = "In English, double dots aren't used."
